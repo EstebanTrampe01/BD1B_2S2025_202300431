@@ -1,0 +1,241 @@
+{
+  "info": {
+    "name": "RespuestaUsuario - API Centros de Evaluación",
+    "description": "Colección para endpoints de RespuestaUsuario",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "RespuestaUsuario",
+      "item": [
+        {
+          "name": "GET All RespuestaUsuario",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/respuestaUsuario",
+              "host": ["{{base_url}}"],
+              "path": ["api", "respuestaUsuario"]
+            }
+          },
+          "response": [
+            {
+              "name": "Success Response",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{base_url}}/api/respuestaUsuario",
+                  "host": ["{{base_url}}"],
+                  "path": ["api", "respuestaUsuario"]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "body": "[{\"ID_RESPUESTA_USUARIO\":1,\"PREGUNTA_ID_PREGUNTA\":1,\"RESPUESTA_SELECCIONADA\":\"A\",\"CORRECTA\":\"S\"}]"
+            }
+          ]
+        },
+        {
+          "name": "GET RespuestaUsuario by ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/respuestaUsuario/:id",
+              "host": ["{{base_url}}"],
+              "path": ["api", "respuestaUsuario", ":id"]
+            }
+          },
+          "response": [
+            {
+              "name": "Success Response",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{base_url}}/api/respuestaUsuario/:id",
+                  "host": ["{{base_url}}"],
+                  "path": ["api", "respuestaUsuario", ":id"]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "body": "{\"ID_RESPUESTA_USUARIO\":1,\"PREGUNTA_ID_PREGUNTA\":1,\"RESPUESTA_SELECCIONADA\":\"A\",\"CORRECTA\":\"S\"}"
+            }
+          ]
+        },
+        {
+          "name": "POST New RespuestaUsuario",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"pregunta_id_pregunta\":1,\"respuesta_seleccionada\":\"A\",\"correcta\":\"S\"}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/respuestaUsuario",
+              "host": ["{{base_url}}"],
+              "path": ["api", "respuestaUsuario"]
+            }
+          },
+          "response": [
+            {
+              "name": "Success Response",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\"pregunta_id_pregunta\":1,\"respuesta_seleccionada\":\"A\",\"correcta\":\"S\"}"
+                },
+                "url": {
+                  "raw": "{{base_url}}/api/respuestaUsuario",
+                  "host": ["{{base_url}}"],
+                  "path": ["api", "respuestaUsuario"]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "body": "{\"id\":2,\"pregunta_id_pregunta\":1,\"respuesta_seleccionada\":\"A\",\"correcta\":\"S\"}"
+            }
+          ]
+        },
+        {
+          "name": "PUT Update RespuestaUsuario",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"pregunta_id_pregunta\":1,\"respuesta_seleccionada\":\"A\",\"correcta\":\"S\"}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/respuestaUsuario/:id",
+              "host": ["{{base_url}}"],
+              "path": ["api", "respuestaUsuario", ":id"]
+            }
+          },
+          "response": [
+            {
+              "name": "Success Response",
+              "originalRequest": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\"pregunta_id_pregunta\":1,\"respuesta_seleccionada\":\"A\",\"correcta\":\"S\"}"
+                },
+                "url": {
+                  "raw": "{{base_url}}/api/respuestaUsuario/:id",
+                  "host": ["{{base_url}}"],
+                  "path": ["api", "respuestaUsuario", ":id"]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "body": "{\"message\":\"RespuestaUsuario updated\"}"
+            }
+          ]
+        },
+        {
+          "name": "DELETE RespuestaUsuario",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/respuestaUsuario/:id",
+              "host": ["{{base_url}}"],
+              "path": ["api", "respuestaUsuario", ":id"]
+            }
+          },
+          "response": [
+            {
+              "name": "Success Response",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "{{base_url}}/api/respuestaUsuario/:id",
+                  "host": ["{{base_url}}"],
+                  "path": ["api", "respuestaUsuario", ":id"]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "body": "{\"message\":\"RespuestaUsuario deleted\"}"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "variable": [
+    {
+      "key": "base_url",
+      "value": "http://localhost:3000"
+    }
+  ]
+}

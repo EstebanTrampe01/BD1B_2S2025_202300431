@@ -1,0 +1,241 @@
+{
+  "info": {
+    "name": "Municipios - API Centros de Evaluación",
+    "description": "Colección para endpoints de Municipios",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Municipios",
+      "item": [
+        {
+          "name": "GET All Municipios",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/municipios",
+              "host": ["{{base_url}}"],
+              "path": ["api", "municipios"]
+            }
+          },
+          "response": [
+            {
+              "name": "Success Response",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{base_url}}/api/municipios",
+                  "host": ["{{base_url}}"],
+                  "path": ["api", "municipios"]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "body": "[{\"ID_MUNICIPIO\":1,\"DEPARTAMENTO_ID_DEPARTAMENTO\":1,\"NOMBRE\":\"Guatemala\",\"CODIGO\":\"GT\"}]"
+            }
+          ]
+        },
+        {
+          "name": "GET Municipio by ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/municipios/:id",
+              "host": ["{{base_url}}"],
+              "path": ["api", "municipios", ":id"]
+            }
+          },
+          "response": [
+            {
+              "name": "Success Response",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{base_url}}/api/municipios/:id",
+                  "host": ["{{base_url}}"],
+                  "path": ["api", "municipios", ":id"]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "body": "{\"ID_MUNICIPIO\":1,\"DEPARTAMENTO_ID_DEPARTAMENTO\":1,\"NOMBRE\":\"Guatemala\",\"CODIGO\":\"GT\"}"
+            }
+          ]
+        },
+        {
+          "name": "POST New Municipio",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"departamento_id_departamento\":1,\"nombre\":\"Nuevo Municipio\",\"codigo\":\"NM\"}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/municipios",
+              "host": ["{{base_url}}"],
+              "path": ["api", "municipios"]
+            }
+          },
+          "response": [
+            {
+              "name": "Success Response",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\"departamento_id_departamento\":1,\"nombre\":\"Nuevo Municipio\",\"codigo\":\"NM\"}"
+                },
+                "url": {
+                  "raw": "{{base_url}}/api/municipios",
+                  "host": ["{{base_url}}"],
+                  "path": ["api", "municipios"]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "body": "{\"id\":2,\"departamento_id_departamento\":1,\"nombre\":\"Nuevo Municipio\",\"codigo\":\"NM\"}"
+            }
+          ]
+        },
+        {
+          "name": "PUT Update Municipio",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"departamento_id_departamento\":1,\"nombre\":\"Municipio Actualizado\",\"codigo\":\"MA\"}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/municipios/:id",
+              "host": ["{{base_url}}"],
+              "path": ["api", "municipios", ":id"]
+            }
+          },
+          "response": [
+            {
+              "name": "Success Response",
+              "originalRequest": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\"departamento_id_departamento\":1,\"nombre\":\"Municipio Actualizado\",\"codigo\":\"MA\"}"
+                },
+                "url": {
+                  "raw": "{{base_url}}/api/municipios/:id",
+                  "host": ["{{base_url}}"],
+                  "path": ["api", "municipios", ":id"]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "body": "{\"message\":\"Municipio updated\"}"
+            }
+          ]
+        },
+        {
+          "name": "DELETE Municipio",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/municipios/:id",
+              "host": ["{{base_url}}"],
+              "path": ["api", "municipios", ":id"]
+            }
+          },
+          "response": [
+            {
+              "name": "Success Response",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "{{base_url}}/api/municipios/:id",
+                  "host": ["{{base_url}}"],
+                  "path": ["api", "municipios", ":id"]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "body": "{\"message\":\"Municipio deleted\"}"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "variable": [
+    {
+      "key": "base_url",
+      "value": "http://localhost:3000"
+    }
+  ]
+}

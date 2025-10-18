@@ -1,0 +1,241 @@
+{
+  "info": {
+    "name": "Registros - API Centros de Evaluación",
+    "description": "Colección para endpoints de Registros",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Registros",
+      "item": [
+        {
+          "name": "GET All Registros",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/registros",
+              "host": ["{{base_url}}"],
+              "path": ["api", "registros"]
+            }
+          },
+          "response": [
+            {
+              "name": "Success Response",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{base_url}}/api/registros",
+                  "host": ["{{base_url}}"],
+                  "path": ["api", "registros"]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "body": "[{\"ID_REGISTRO\":1,\"UBICACION_ESCUELA_ID_ESCUELA\":1,\"UBICACION_CENTRO_ID_CENTRO\":1,\"MUNICIPIO_ID_MUNICIPIO\":1,\"MUNICIPIO_DEPARTAMENTO_ID_DEPARTAMENTO\":1,\"CORRELATIVO_ID_CORRELATIVO\":1,\"FECHA\":\"2023-01-01\",\"TIPO_TRAMITE\":\"Tipo\",\"TIPO_LICENCIA\":\"A\",\"NOMBRE_COMPLETO\":\"Nombre\",\"GENERO\":\"M\"}]"
+            }
+          ]
+        },
+        {
+          "name": "GET Registro by ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/registros/:id",
+              "host": ["{{base_url}}"],
+              "path": ["api", "registros", ":id"]
+            }
+          },
+          "response": [
+            {
+              "name": "Success Response",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{base_url}}/api/registros/:id",
+                  "host": ["{{base_url}}"],
+                  "path": ["api", "registros", ":id"]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "body": "{\"ID_REGISTRO\":1,\"UBICACION_ESCUELA_ID_ESCUELA\":1,\"UBICACION_CENTRO_ID_CENTRO\":1,\"MUNICIPIO_ID_MUNICIPIO\":1,\"MUNICIPIO_DEPARTAMENTO_ID_DEPARTAMENTO\":1,\"CORRELATIVO_ID_CORRELATIVO\":1,\"FECHA\":\"2023-01-01\",\"TIPO_TRAMITE\":\"Tipo\",\"TIPO_LICENCIA\":\"A\",\"NOMBRE_COMPLETO\":\"Nombre\",\"GENERO\":\"M\"}"
+            }
+          ]
+        },
+        {
+          "name": "POST New Registro",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"ubicacion_escuela_id_escuela\":1,\"ubicacion_centro_id_centro\":1,\"municipio_id_municipio\":1,\"municipio_departamento_id_departamento\":1,\"correlativo_id_correlativo\":1,\"fecha\":\"2023-01-01\",\"tipo_tramite\":\"Tipo\",\"tipo_licencia\":\"A\",\"nombre_completo\":\"Nombre\",\"genero\":\"M\"}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/registros",
+              "host": ["{{base_url}}"],
+              "path": ["api", "registros"]
+            }
+          },
+          "response": [
+            {
+              "name": "Success Response",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\"ubicacion_escuela_id_escuela\":1,\"ubicacion_centro_id_centro\":1,\"municipio_id_municipio\":1,\"municipio_departamento_id_departamento\":1,\"correlativo_id_correlativo\":1,\"fecha\":\"2023-01-01\",\"tipo_tramite\":\"Tipo\",\"tipo_licencia\":\"A\",\"nombre_completo\":\"Nombre\",\"genero\":\"M\"}"
+                },
+                "url": {
+                  "raw": "{{base_url}}/api/registros",
+                  "host": ["{{base_url}}"],
+                  "path": ["api", "registros"]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "body": "{\"id\":2,\"ubicacion_escuela_id_escuela\":1,\"ubicacion_centro_id_centro\":1,\"municipio_id_municipio\":1,\"municipio_departamento_id_departamento\":1,\"correlativo_id_correlativo\":1,\"fecha\":\"2023-01-01\",\"tipo_tramite\":\"Tipo\",\"tipo_licencia\":\"A\",\"nombre_completo\":\"Nombre\",\"genero\":\"M\"}"
+            }
+          ]
+        },
+        {
+          "name": "PUT Update Registro",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"ubicacion_escuela_id_escuela\":1,\"ubicacion_centro_id_centro\":1,\"municipio_id_municipio\":1,\"municipio_departamento_id_departamento\":1,\"correlativo_id_correlativo\":1,\"fecha\":\"2023-01-01\",\"tipo_tramite\":\"Tipo\",\"tipo_licencia\":\"A\",\"nombre_completo\":\"Nombre\",\"genero\":\"M\"}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/registros/:id",
+              "host": ["{{base_url}}"],
+              "path": ["api", "registros", ":id"]
+            }
+          },
+          "response": [
+            {
+              "name": "Success Response",
+              "originalRequest": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\"ubicacion_escuela_id_escuela\":1,\"ubicacion_centro_id_centro\":1,\"municipio_id_municipio\":1,\"municipio_departamento_id_departamento\":1,\"correlativo_id_correlativo\":1,\"fecha\":\"2023-01-01\",\"tipo_tramite\":\"Tipo\",\"tipo_licencia\":\"A\",\"nombre_completo\":\"Nombre\",\"genero\":\"M\"}"
+                },
+                "url": {
+                  "raw": "{{base_url}}/api/registros/:id",
+                  "host": ["{{base_url}}"],
+                  "path": ["api", "registros", ":id"]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "body": "{\"message\":\"Registro updated\"}"
+            }
+          ]
+        },
+        {
+          "name": "DELETE Registro",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/registros/:id",
+              "host": ["{{base_url}}"],
+              "path": ["api", "registros", ":id"]
+            }
+          },
+          "response": [
+            {
+              "name": "Success Response",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "{{base_url}}/api/registros/:id",
+                  "host": ["{{base_url}}"],
+                  "path": ["api", "registros", ":id"]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "body": "{\"message\":\"Registro deleted\"}"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "variable": [
+    {
+      "key": "base_url",
+      "value": "http://localhost:3000"
+    }
+  ]
+}

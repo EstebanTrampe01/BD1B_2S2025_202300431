@@ -1,0 +1,241 @@
+{
+  "info": {
+    "name": "PreguntasPractico - API Centros de Evaluación",
+    "description": "Colección para endpoints de PreguntasPractico",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "PreguntasPractico",
+      "item": [
+        {
+          "name": "GET All PreguntasPractico",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/preguntasPractico",
+              "host": ["{{base_url}}"],
+              "path": ["api", "preguntasPractico"]
+            }
+          },
+          "response": [
+            {
+              "name": "Success Response",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{base_url}}/api/preguntasPractico",
+                  "host": ["{{base_url}}"],
+                  "path": ["api", "preguntasPractico"]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "body": "[{\"ID_PREGUNTA_PRACTICO\":1,\"EXAMEN_ID_EXAMEN\":1,\"PREGUNTA\":\"¿Cómo maniobra?\",\"CALIFICACION_MAXIMA\":10,\"CALIFICACION_OBTENIDA\":8}]"
+            }
+          ]
+        },
+        {
+          "name": "GET PreguntaPractico by ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/preguntasPractico/:id",
+              "host": ["{{base_url}}"],
+              "path": ["api", "preguntasPractico", ":id"]
+            }
+          },
+          "response": [
+            {
+              "name": "Success Response",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{base_url}}/api/preguntasPractico/:id",
+                  "host": ["{{base_url}}"],
+                  "path": ["api", "preguntasPractico", ":id"]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "body": "{\"ID_PREGUNTA_PRACTICO\":1,\"EXAMEN_ID_EXAMEN\":1,\"PREGUNTA\":\"¿Cómo maniobra?\",\"CALIFICACION_MAXIMA\":10,\"CALIFICACION_OBTENIDA\":8}"
+            }
+          ]
+        },
+        {
+          "name": "POST New PreguntaPractico",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"examen_id_examen\":1,\"pregunta\":\"¿Cómo maniobra?\",\"calificacion_maxima\":10,\"calificacion_obtenida\":8}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/preguntasPractico",
+              "host": ["{{base_url}}"],
+              "path": ["api", "preguntasPractico"]
+            }
+          },
+          "response": [
+            {
+              "name": "Success Response",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\"examen_id_examen\":1,\"pregunta\":\"¿Cómo maniobra?\",\"calificacion_maxima\":10,\"calificacion_obtenida\":8}"
+                },
+                "url": {
+                  "raw": "{{base_url}}/api/preguntasPractico",
+                  "host": ["{{base_url}}"],
+                  "path": ["api", "preguntasPractico"]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "body": "{\"id\":2,\"examen_id_examen\":1,\"pregunta\":\"¿Cómo maniobra?\",\"calificacion_maxima\":10,\"calificacion_obtenida\":8}"
+            }
+          ]
+        },
+        {
+          "name": "PUT Update PreguntaPractico",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"examen_id_examen\":1,\"pregunta\":\"¿Cómo maniobra?\",\"calificacion_maxima\":10,\"calificacion_obtenida\":8}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/preguntasPractico/:id",
+              "host": ["{{base_url}}"],
+              "path": ["api", "preguntasPractico", ":id"]
+            }
+          },
+          "response": [
+            {
+              "name": "Success Response",
+              "originalRequest": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\"examen_id_examen\":1,\"pregunta\":\"¿Cómo maniobra?\",\"calificacion_maxima\":10,\"calificacion_obtenida\":8}"
+                },
+                "url": {
+                  "raw": "{{base_url}}/api/preguntasPractico/:id",
+                  "host": ["{{base_url}}"],
+                  "path": ["api", "preguntasPractico", ":id"]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "body": "{\"message\":\"PreguntaPractico updated\"}"
+            }
+          ]
+        },
+        {
+          "name": "DELETE PreguntaPractico",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/preguntasPractico/:id",
+              "host": ["{{base_url}}"],
+              "path": ["api", "preguntasPractico", ":id"]
+            }
+          },
+          "response": [
+            {
+              "name": "Success Response",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "{{base_url}}/api/preguntasPractico/:id",
+                  "host": ["{{base_url}}"],
+                  "path": ["api", "preguntasPractico", ":id"]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "body": "{\"message\":\"PreguntaPractico deleted\"}"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "variable": [
+    {
+      "key": "base_url",
+      "value": "http://localhost:3000"
+    }
+  ]
+}

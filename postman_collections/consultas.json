@@ -1,0 +1,131 @@
+{
+  "info": {
+    "name": "Consultas - API Centros de Evaluación",
+    "description": "Colección para endpoints de consultas SQL",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Consultas",
+      "item": [
+        {
+          "name": "Consulta 1: Registros por Municipio",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/consultas/registros-por-municipio",
+              "host": ["{{base_url}}"],
+              "path": ["api", "consultas", "registros-por-municipio"]
+            }
+          },
+          "response": [
+            {
+              "name": "Success Response",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{base_url}}/api/consultas/registros-por-municipio",
+                  "host": ["{{base_url}}"],
+                  "path": ["api", "consultas", "registros-por-municipio"]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "body": "[{\"MUNICIPIO\":\"Guatemala\",\"TOTAL_REGISTROS\":150}]"
+            }
+          ]
+        },
+        {
+          "name": "Consulta 2: Examenes Aprobados por Centro",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/consultas/examenes-aprobados-centro",
+              "host": ["{{base_url}}"],
+              "path": ["api", "consultas", "examenes-aprobados-centro"]
+            }
+          },
+          "response": [
+            {
+              "name": "Success Response",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{base_url}}/api/consultas/examenes-aprobados-centro",
+                  "host": ["{{base_url}}"],
+                  "path": ["api", "consultas", "examenes-aprobados-centro"]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "body": "[{\"CENTRO\":\"Centro 1\",\"APROBADOS\":120,\"TOTAL\":150}]"
+            }
+          ]
+        },
+        {
+          "name": "Consulta 3: Promedio Calificaciones por Tipo Examen",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/consultas/promedio-calificaciones-tipo",
+              "host": ["{{base_url}}"],
+              "path": ["api", "consultas", "promedio-calificaciones-tipo"]
+            }
+          },
+          "response": [
+            {
+              "name": "Success Response",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{base_url}}/api/consultas/promedio-calificaciones-tipo",
+                  "host": ["{{base_url}}"],
+                  "path": ["api", "consultas", "promedio-calificaciones-tipo"]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "body": "[{\"TIPO_EXAMEN\":\"Teorico\",\"PROMEDIO\":78.5},{\"TIPO_EXAMEN\":\"Practico\",\"PROMEDIO\":82.3}]"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "variable": [
+    {
+      "key": "base_url",
+      "value": "http://localhost:3000"
+    }
+  ]
+}

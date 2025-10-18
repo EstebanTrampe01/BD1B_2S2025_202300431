@@ -1,0 +1,1052 @@
+{
+  "info": {
+    "name": "API Centros de Evaluación de Manejo",
+    "description": "Colección completa de pruebas para la API REST - 63 endpoints",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Departamentos",
+      "item": [
+        {
+          "name": "GET All Departamentos",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/departamentos",
+              "host": ["{{base_url}}"],
+              "path": ["api", "departamentos"]
+            }
+          }
+        },
+        {
+          "name": "GET Departamento by ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/departamentos/:id",
+              "host": ["{{base_url}}"],
+              "path": ["api", "departamentos", ":id"]
+            }
+          }
+        },
+        {
+          "name": "POST New Departamento",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nombre\": \"Nuevo Departamento\",\n  \"codigo\": \"ND\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/departamentos",
+              "host": ["{{base_url}}"],
+              "path": ["api", "departamentos"]
+            }
+          }
+        },
+        {
+          "name": "PUT Update Departamento",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nombre\": \"Departamento Actualizado\",\n  \"codigo\": \"DA\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/departamentos/:id",
+              "host": ["{{base_url}}"],
+              "path": ["api", "departamentos", ":id"]
+            }
+          }
+        },
+        {
+          "name": "DELETE Departamento",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/departamentos/:id",
+              "host": ["{{base_url}}"],
+              "path": ["api", "departamentos", ":id"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Municipios",
+      "item": [
+        {
+          "name": "GET All Municipios",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/municipios",
+              "host": ["{{base_url}}"],
+              "path": ["api", "municipios"]
+            }
+          }
+        },
+        {
+          "name": "GET Municipio by ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/municipios/:id",
+              "host": ["{{base_url}}"],
+              "path": ["api", "municipios", ":id"]
+            }
+          }
+        },
+        {
+          "name": "POST New Municipio",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"departamento_id_departamento\": 1,\n  \"nombre\": \"Nuevo Municipio\",\n  \"codigo\": \"NM\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/municipios",
+              "host": ["{{base_url}}"],
+              "path": ["api", "municipios"]
+            }
+          }
+        },
+        {
+          "name": "PUT Update Municipio",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"departamento_id_departamento\": 1,\n  \"nombre\": \"Municipio Actualizado\",\n  \"codigo\": \"MA\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/municipios/:id",
+              "host": ["{{base_url}}"],
+              "path": ["api", "municipios", ":id"]
+            }
+          }
+        },
+        {
+          "name": "DELETE Municipio",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/municipios/:id",
+              "host": ["{{base_url}}"],
+              "path": ["api", "municipios", ":id"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Centros",
+      "item": [
+        {
+          "name": "GET All Centros",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/centros",
+              "host": ["{{base_url}}"],
+              "path": ["api", "centros"]
+            }
+          }
+        },
+        {
+          "name": "GET Centro by ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/centros/:id",
+              "host": ["{{base_url}}"],
+              "path": ["api", "centros", ":id"]
+            }
+          }
+        },
+        {
+          "name": "POST New Centro",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nombre\": \"Nuevo Centro\",\n  \"municipio_id_municipio\": 1\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/centros",
+              "host": ["{{base_url}}"],
+              "path": ["api", "centros"]
+            }
+          }
+        },
+        {
+          "name": "PUT Update Centro",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nombre\": \"Centro Actualizado\",\n  \"municipio_id_municipio\": 1\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/centros/:id",
+              "host": ["{{base_url}}"],
+              "path": ["api", "centros", ":id"]
+            }
+          }
+        },
+        {
+          "name": "DELETE Centro",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/centros/:id",
+              "host": ["{{base_url}}"],
+              "path": ["api", "centros", ":id"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Escuelas",
+      "item": [
+        {
+          "name": "GET All Escuelas",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/escuelas",
+              "host": ["{{base_url}}"],
+              "path": ["api", "escuelas"]
+            }
+          }
+        },
+        {
+          "name": "GET Escuela by ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/escuelas/:id",
+              "host": ["{{base_url}}"],
+              "path": ["api", "escuelas", ":id"]
+            }
+          }
+        },
+        {
+          "name": "POST New Escuela",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nombre\": \"Nueva Escuela\",\n  \"direccion\": \"Dirección\",\n  \"acuerdo\": \"Acuerdo\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/escuelas",
+              "host": ["{{base_url}}"],
+              "path": ["api", "escuelas"]
+            }
+          }
+        },
+        {
+          "name": "PUT Update Escuela",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nombre\": \"Escuela Actualizada\",\n  \"direccion\": \"Dirección Actualizada\",\n  \"acuerdo\": \"Acuerdo Actualizado\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/escuelas/:id",
+              "host": ["{{base_url}}"],
+              "path": ["api", "escuelas", ":id"]
+            }
+          }
+        },
+        {
+          "name": "DELETE Escuela",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/escuelas/:id",
+              "host": ["{{base_url}}"],
+              "path": ["api", "escuelas", ":id"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Ubicaciones",
+      "item": [
+        {
+          "name": "GET All Ubicaciones",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/ubicaciones",
+              "host": ["{{base_url}}"],
+              "path": ["api", "ubicaciones"]
+            }
+          }
+        },
+        {
+          "name": "GET Ubicacion by ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/ubicaciones/:id",
+              "host": ["{{base_url}}"],
+              "path": ["api", "ubicaciones", ":id"]
+            }
+          }
+        },
+        {
+          "name": "POST New Ubicacion",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"escuela_id_escuela\": 1,\n  \"centro_id_centro\": 1\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/ubicaciones",
+              "host": ["{{base_url}}"],
+              "path": ["api", "ubicaciones"]
+            }
+          }
+        },
+        {
+          "name": "PUT Update Ubicacion",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"escuela_id_escuela\": 1,\n  \"centro_id_centro\": 1\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/ubicaciones/:id",
+              "host": ["{{base_url}}"],
+              "path": ["api", "ubicaciones", ":id"]
+            }
+          }
+        },
+        {
+          "name": "DELETE Ubicacion",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/ubicaciones/:id",
+              "host": ["{{base_url}}"],
+              "path": ["api", "ubicaciones", ":id"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Correlativos",
+      "item": [
+        {
+          "name": "GET All Correlativos",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/correlativos",
+              "host": ["{{base_url}}"],
+              "path": ["api", "correlativos"]
+            }
+          }
+        },
+        {
+          "name": "GET Correlativo by ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/correlativos/:id",
+              "host": ["{{base_url}}"],
+              "path": ["api", "correlativos", ":id"]
+            }
+          }
+        },
+        {
+          "name": "POST New Correlativo",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"fecha\": \"2023-01-01\",\n  \"no_examen\": 1,\n  \"registro_id_registro\": 1\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/correlativos",
+              "host": ["{{base_url}}"],
+              "path": ["api", "correlativos"]
+            }
+          }
+        },
+        {
+          "name": "PUT Update Correlativo",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"fecha\": \"2023-01-01\",\n  \"no_examen\": 1,\n  \"registro_id_registro\": 1\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/correlativos/:id",
+              "host": ["{{base_url}}"],
+              "path": ["api", "correlativos", ":id"]
+            }
+          }
+        },
+        {
+          "name": "DELETE Correlativo",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/correlativos/:id",
+              "host": ["{{base_url}}"],
+              "path": ["api", "correlativos", ":id"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Registros",
+      "item": [
+        {
+          "name": "GET All Registros",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/registros",
+              "host": ["{{base_url}}"],
+              "path": ["api", "registros"]
+            }
+          }
+        },
+        {
+          "name": "GET Registro by ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/registros/:id",
+              "host": ["{{base_url}}"],
+              "path": ["api", "registros", ":id"]
+            }
+          }
+        },
+        {
+          "name": "POST New Registro",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"ubicacion_escuela_id_escuela\": 1,\n  \"ubicacion_centro_id_centro\": 1,\n  \"municipio_id_municipio\": 1,\n  \"municipio_departamento_id_departamento\": 1,\n  \"correlativo_id_correlativo\": 1,\n  \"fecha\": \"2023-01-01\",\n  \"tipo_tramite\": \"Tipo\",\n  \"tipo_licencia\": \"A\",\n  \"nombre_completo\": \"Nombre\",\n  \"genero\": \"M\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/registros",
+              "host": ["{{base_url}}"],
+              "path": ["api", "registros"]
+            }
+          }
+        },
+        {
+          "name": "PUT Update Registro",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"ubicacion_escuela_id_escuela\": 1,\n  \"ubicacion_centro_id_centro\": 1,\n  \"municipio_id_municipio\": 1,\n  \"municipio_departamento_id_departamento\": 1,\n  \"correlativo_id_correlativo\": 1,\n  \"fecha\": \"2023-01-01\",\n  \"tipo_tramite\": \"Tipo\",\n  \"tipo_licencia\": \"A\",\n  \"nombre_completo\": \"Nombre\",\n  \"genero\": \"M\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/registros/:id",
+              "host": ["{{base_url}}"],
+              "path": ["api", "registros", ":id"]
+            }
+          }
+        },
+        {
+          "name": "DELETE Registro",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/registros/:id",
+              "host": ["{{base_url}}"],
+              "path": ["api", "registros", ":id"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Examenes",
+      "item": [
+        {
+          "name": "GET All Examenes",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/examenes",
+              "host": ["{{base_url}}"],
+              "path": ["api", "examenes"]
+            }
+          }
+        },
+        {
+          "name": "GET Examen by ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/examenes/:id",
+              "host": ["{{base_url}}"],
+              "path": ["api", "examenes", ":id"]
+            }
+          }
+        },
+        {
+          "name": "POST New Examen",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"registro_id_registro\": 1,\n  \"correlativo_id_correlativo\": 1\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/examenes",
+              "host": ["{{base_url}}"],
+              "path": ["api", "examenes"]
+            }
+          }
+        },
+        {
+          "name": "PUT Update Examen",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"registro_id_registro\": 1,\n  \"correlativo_id_correlativo\": 1\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/examenes/:id",
+              "host": ["{{base_url}}"],
+              "path": ["api", "examenes", ":id"]
+            }
+          }
+        },
+        {
+          "name": "DELETE Examen",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/examenes/:id",
+              "host": ["{{base_url}}"],
+              "path": ["api", "examenes", ":id"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Preguntas",
+      "item": [
+        {
+          "name": "GET All Preguntas",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/preguntas",
+              "host": ["{{base_url}}"],
+              "path": ["api", "preguntas"]
+            }
+          }
+        },
+        {
+          "name": "GET Pregunta by ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/preguntas/:id",
+              "host": ["{{base_url}}"],
+              "path": ["api", "preguntas", ":id"]
+            }
+          }
+        },
+        {
+          "name": "POST New Pregunta",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"pregunta_texto\": \"Texto de la pregunta\",\n  \"respuesta\": 1,\n  \"res1\": \"Opción 1\",\n  \"res2\": \"Opción 2\",\n  \"res3\": \"Opción 3\",\n  \"res4\": \"Opción 4\",\n  \"examen_id_examen\": 1\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/preguntas",
+              "host": ["{{base_url}}"],
+              "path": ["api", "preguntas"]
+            }
+          }
+        },
+        {
+          "name": "PUT Update Pregunta",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"pregunta_texto\": \"Texto actualizado\",\n  \"respuesta\": 1,\n  \"res1\": \"Opción 1\",\n  \"res2\": \"Opción 2\",\n  \"res3\": \"Opción 3\",\n  \"res4\": \"Opción 4\",\n  \"examen_id_examen\": 1\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/preguntas/:id",
+              "host": ["{{base_url}}"],
+              "path": ["api", "preguntas", ":id"]
+            }
+          }
+        },
+        {
+          "name": "DELETE Pregunta",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/preguntas/:id",
+              "host": ["{{base_url}}"],
+              "path": ["api", "preguntas", ":id"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Preguntas Practico",
+      "item": [
+        {
+          "name": "GET All Preguntas Practico",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/preguntas-practico",
+              "host": ["{{base_url}}"],
+              "path": ["api", "preguntas-practico"]
+            }
+          }
+        },
+        {
+          "name": "GET Pregunta Practico by ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/preguntas-practico/:id",
+              "host": ["{{base_url}}"],
+              "path": ["api", "preguntas-practico", ":id"]
+            }
+          }
+        },
+        {
+          "name": "POST New Pregunta Practico",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"pregunta_texto\": \"Texto de la pregunta práctica\",\n  \"punteo\": 10,\n  \"examen_id_examen\": 1\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/preguntas-practico",
+              "host": ["{{base_url}}"],
+              "path": ["api", "preguntas-practico"]
+            }
+          }
+        },
+        {
+          "name": "PUT Update Pregunta Practico",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"pregunta_texto\": \"Texto actualizado\",\n  \"punteo\": 10,\n  \"examen_id_examen\": 1\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/preguntas-practico/:id",
+              "host": ["{{base_url}}"],
+              "path": ["api", "preguntas-practico", ":id"]
+            }
+          }
+        },
+        {
+          "name": "DELETE Pregunta Practico",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/preguntas-practico/:id",
+              "host": ["{{base_url}}"],
+              "path": ["api", "preguntas-practico", ":id"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Respuestas Usuario",
+      "item": [
+        {
+          "name": "GET All Respuestas Usuario",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/respuestas-usuario",
+              "host": ["{{base_url}}"],
+              "path": ["api", "respuestas-usuario"]
+            }
+          }
+        },
+        {
+          "name": "GET Respuesta Usuario by ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/respuestas-usuario/:id",
+              "host": ["{{base_url}}"],
+              "path": ["api", "respuestas-usuario", ":id"]
+            }
+          }
+        },
+        {
+          "name": "POST New Respuesta Usuario",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"pregunta_id_pregunta\": 1,\n  \"examen_id_examen\": 1,\n  \"respuesta\": 1\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/respuestas-usuario",
+              "host": ["{{base_url}}"],
+              "path": ["api", "respuestas-usuario"]
+            }
+          }
+        },
+        {
+          "name": "PUT Update Respuesta Usuario",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"pregunta_id_pregunta\": 1,\n  \"examen_id_examen\": 1,\n  \"respuesta\": 1\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/respuestas-usuario/:id",
+              "host": ["{{base_url}}"],
+              "path": ["api", "respuestas-usuario", ":id"]
+            }
+          }
+        },
+        {
+          "name": "DELETE Respuesta Usuario",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/respuestas-usuario/:id",
+              "host": ["{{base_url}}"],
+              "path": ["api", "respuestas-usuario", ":id"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Respuestas Practico",
+      "item": [
+        {
+          "name": "GET All Respuestas Practico",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/respuestas-practico",
+              "host": ["{{base_url}}"],
+              "path": ["api", "respuestas-practico"]
+            }
+          }
+        },
+        {
+          "name": "GET Respuesta Practico by ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/respuestas-practico/:id",
+              "host": ["{{base_url}}"],
+              "path": ["api", "respuestas-practico", ":id"]
+            }
+          }
+        },
+        {
+          "name": "POST New Respuesta Practico",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"pregunta_practico_id_pregunta_practico\": 1,\n  \"examen_id_examen\": 1,\n  \"nota\": 10\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/respuestas-practico",
+              "host": ["{{base_url}}"],
+              "path": ["api", "respuestas-practico"]
+            }
+          }
+        },
+        {
+          "name": "PUT Update Respuesta Practico",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"pregunta_practico_id_pregunta_practico\": 1,\n  \"examen_id_examen\": 1,\n  \"nota\": 10\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/respuestas-practico/:id",
+              "host": ["{{base_url}}"],
+              "path": ["api", "respuestas-practico", ":id"]
+            }
+          }
+        },
+        {
+          "name": "DELETE Respuesta Practico",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/respuestas-practico/:id",
+              "host": ["{{base_url}}"],
+              "path": ["api", "respuestas-practico", ":id"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Consultas",
+      "item": [
+        {
+          "name": "Estadísticas de Evaluaciones",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/consultas/estadisticas-evaluaciones",
+              "host": ["{{base_url}}"],
+              "path": ["api", "consultas", "estadisticas-evaluaciones"]
+            }
+          }
+        },
+        {
+          "name": "Ranking de Evaluadores",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/consultas/ranking-evaluadores",
+              "host": ["{{base_url}}"],
+              "path": ["api", "consultas", "ranking-evaluadores"]
+            }
+          }
+        },
+        {
+          "name": "Pregunta con Menor Aciertos",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/consultas/pregunta-menor-aciertos",
+              "host": ["{{base_url}}"],
+              "path": ["api", "consultas", "pregunta-menor-aciertos"]
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "variable": [
+    {
+      "key": "base_url",
+      "value": "http://localhost:3000"
+    }
+  ]
+}

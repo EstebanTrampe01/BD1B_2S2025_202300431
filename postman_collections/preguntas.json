@@ -1,0 +1,241 @@
+{
+  "info": {
+    "name": "Preguntas - API Centros de Evaluación",
+    "description": "Colección para endpoints de Preguntas",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Preguntas",
+      "item": [
+        {
+          "name": "GET All Preguntas",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/preguntas",
+              "host": ["{{base_url}}"],
+              "path": ["api", "preguntas"]
+            }
+          },
+          "response": [
+            {
+              "name": "Success Response",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{base_url}}/api/preguntas",
+                  "host": ["{{base_url}}"],
+                  "path": ["api", "preguntas"]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "body": "[{\"ID_PREGUNTA\":1,\"EXAMEN_ID_EXAMEN\":1,\"PREGUNTA\":\"¿Cuál es la señal?\",\"OPCION_A\":\"A\",\"OPCION_B\":\"B\",\"OPCION_C\":\"C\",\"RESPUESTA_CORRECTA\":\"A\"}]"
+            }
+          ]
+        },
+        {
+          "name": "GET Pregunta by ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/preguntas/:id",
+              "host": ["{{base_url}}"],
+              "path": ["api", "preguntas", ":id"]
+            }
+          },
+          "response": [
+            {
+              "name": "Success Response",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{base_url}}/api/preguntas/:id",
+                  "host": ["{{base_url}}"],
+                  "path": ["api", "preguntas", ":id"]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "body": "{\"ID_PREGUNTA\":1,\"EXAMEN_ID_EXAMEN\":1,\"PREGUNTA\":\"¿Cuál es la señal?\",\"OPCION_A\":\"A\",\"OPCION_B\":\"B\",\"OPCION_C\":\"C\",\"RESPUESTA_CORRECTA\":\"A\"}"
+            }
+          ]
+        },
+        {
+          "name": "POST New Pregunta",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"examen_id_examen\":1,\"pregunta\":\"¿Cuál es la señal?\",\"opcion_a\":\"A\",\"opcion_b\":\"B\",\"opcion_c\":\"C\",\"respuesta_correcta\":\"A\"}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/preguntas",
+              "host": ["{{base_url}}"],
+              "path": ["api", "preguntas"]
+            }
+          },
+          "response": [
+            {
+              "name": "Success Response",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\"examen_id_examen\":1,\"pregunta\":\"¿Cuál es la señal?\",\"opcion_a\":\"A\",\"opcion_b\":\"B\",\"opcion_c\":\"C\",\"respuesta_correcta\":\"A\"}"
+                },
+                "url": {
+                  "raw": "{{base_url}}/api/preguntas",
+                  "host": ["{{base_url}}"],
+                  "path": ["api", "preguntas"]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "body": "{\"id\":2,\"examen_id_examen\":1,\"pregunta\":\"¿Cuál es la señal?\",\"opcion_a\":\"A\",\"opcion_b\":\"B\",\"opcion_c\":\"C\",\"respuesta_correcta\":\"A\"}"
+            }
+          ]
+        },
+        {
+          "name": "PUT Update Pregunta",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"examen_id_examen\":1,\"pregunta\":\"¿Cuál es la señal?\",\"opcion_a\":\"A\",\"opcion_b\":\"B\",\"opcion_c\":\"C\",\"respuesta_correcta\":\"A\"}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/preguntas/:id",
+              "host": ["{{base_url}}"],
+              "path": ["api", "preguntas", ":id"]
+            }
+          },
+          "response": [
+            {
+              "name": "Success Response",
+              "originalRequest": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\"examen_id_examen\":1,\"pregunta\":\"¿Cuál es la señal?\",\"opcion_a\":\"A\",\"opcion_b\":\"B\",\"opcion_c\":\"C\",\"respuesta_correcta\":\"A\"}"
+                },
+                "url": {
+                  "raw": "{{base_url}}/api/preguntas/:id",
+                  "host": ["{{base_url}}"],
+                  "path": ["api", "preguntas", ":id"]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "body": "{\"message\":\"Pregunta updated\"}"
+            }
+          ]
+        },
+        {
+          "name": "DELETE Pregunta",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/preguntas/:id",
+              "host": ["{{base_url}}"],
+              "path": ["api", "preguntas", ":id"]
+            }
+          },
+          "response": [
+            {
+              "name": "Success Response",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "{{base_url}}/api/preguntas/:id",
+                  "host": ["{{base_url}}"],
+                  "path": ["api", "preguntas", ":id"]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "body": "{\"message\":\"Pregunta deleted\"}"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "variable": [
+    {
+      "key": "base_url",
+      "value": "http://localhost:3000"
+    }
+  ]
+}

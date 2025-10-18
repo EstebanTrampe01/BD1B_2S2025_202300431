@@ -1,0 +1,12 @@
+services:
+  oracle-db:
+    image: gvenzl/oracle-xe:21-slim
+    container_name: oracle-proyecto2
+    environment:
+      - ORACLE_PASSWORD=admin
+      - APP_USER=PROYECTO2_USER
+      - APP_USER_PASSWORD=admin123
+    ports:
+      - "1521:1521"
+    volumes:
+      - ./sql:/container-entrypoint-initdb.d
