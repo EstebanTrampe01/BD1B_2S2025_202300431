@@ -3,7 +3,8 @@ const oracledb = require('oracledb');
 const dbConfig = {
   user: process.env.DB_USER,
   password: process.env.DB_PASSWORD,
-  connectString: `${process.env.DB_HOST}:${process.env.DB_PORT}/${process.env.DB_SERVICE}`
+  connectString: `${process.env.DB_HOST}:${process.env.DB_PORT}/${process.env.DB_SERVICE}`,
+  privilege: process.env.DB_USER === 'SYS' ? oracledb.SYSDBA : undefined
 };
 
 async function getConnection() {

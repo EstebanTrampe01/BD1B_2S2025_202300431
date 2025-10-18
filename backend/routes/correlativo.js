@@ -36,14 +36,14 @@ router.get('/:id', async (req, res) => {
 router.post('/', async (req, res) => {
   let connection;
   try {
-    const { fecha, no_examen, registro_id_registro } = req.body;
+    const { id_correlativo, fecha, no_examen, registro_id_registro } = req.body;
     connection = await getConnection();
-    const result = await connection.execute(
-      'INSERT INTO P2_CORRELATIVO (ID_CORRELATIVO, FECHA, NO_EXAMEN, REGISTRO_ID_REGISTRO) VALUES (P2_CORRELATIVO_SEQ.NEXTVAL, TO_DATE(:fecha, \'YYYY-MM-DD\'), :no_examen, :registro_id) RETURNING ID_CORRELATIVO INTO :id',
-      { fecha, no_examen, registro_id: registro_id_registro, id: { type: oracledb.NUMBER, dir: oracledb.BIND_OUT } },
+    await connection.execute(
+      'INSERT INTO P2_CORRELATIVO (ID_CORRELATIVO, FECHA, NO_EXAMEN, REGISTRO_ID_REGISTRO) VALUES (:id, TO_DATE(:fecha, \'YYYY-MM-DD\'), :no_examen, :registro_id)',
+      { id: id_correlativo, fecha, no_examen, registro_id: registro_id_registro },
       { autoCommit: true }
     );
-    res.status(201).json({ id: result.outBinds.id[0], fecha, no_examen, registro_id_registro });
+    res.status(201).json({ id: id_correlativo, fecha, no_examen, registro_id_registro });
   } catch (err) {
     res.status(500).json({ error: err.message });
   } finally {

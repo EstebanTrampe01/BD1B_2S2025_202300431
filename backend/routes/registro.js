@@ -36,14 +36,14 @@ router.get('/:id', async (req, res) => {
 router.post('/', async (req, res) => {
   let connection;
   try {
-    const { ubicacion_escuela_id_escuela, ubicacion_centro_id_centro, municipio_id_municipio, municipio_departamento_id_departamento, correlativo_id_correlativo, fecha, tipo_tramite, tipo_licencia, nombre_completo, genero } = req.body;
+    const { id_registro, ubicacion_escuela_id_escuela, ubicacion_centro_id_centro, municipio_id_municipio, municipio_departamento_id_departamento, correlativo_id_correlativo, fecha, tipo_tramite, tipo_licencia, nombre_completo, genero } = req.body;
     connection = await getConnection();
-    const result = await connection.execute(
-      'INSERT INTO P2_REGISTRO (ID_REGISTRO, UBICACION_ESCUELA_ID_ESCUELA, UBICACION_CENTRO_ID_CENTRO, MUNICIPIO_ID_MUNICIPIO, MUNICIPIO_DEPARTAMENTO_ID_DEPARTAMENTO, CORRELATIVO_ID_CORRELATIVO, FECHA, TIPO_TRAMITE, TIPO_LICENCIA, NOMBRE_COMPLETO, GENERO) VALUES (P2_REGISTRO_SEQ.NEXTVAL, :escuela_id, :centro_id, :municipio_id, :departamento_id, :correlativo_id, TO_DATE(:fecha, \'YYYY-MM-DD\'), :tipo_tramite, :tipo_licencia, :nombre_completo, :genero) RETURNING ID_REGISTRO INTO :id',
-      { escuela_id: ubicacion_escuela_id_escuela, centro_id: ubicacion_centro_id_centro, municipio_id: municipio_id_municipio, departamento_id: municipio_departamento_id_departamento, correlativo_id: correlativo_id_correlativo, fecha, tipo_tramite, tipo_licencia, nombre_completo, genero, id: { type: oracledb.NUMBER, dir: oracledb.BIND_OUT } },
+    await connection.execute(
+      'INSERT INTO P2_REGISTRO (ID_REGISTRO, UBICACION_ESCUELA_ID_ESCUELA, UBICACION_CENTRO_ID_CENTRO, MUNICIPIO_ID_MUNICIPIO, MUNICIPIO_DEPARTAMENTO_ID_DEPARTAMENTO, CORRELATIVO_ID_CORRELATIVO, FECHA, TIPO_TRAMITE, TIPO_LICENCIA, NOMBRE_COMPLETO, GENERO) VALUES (:id, :escuela_id, :centro_id, :municipio_id, :departamento_id, :correlativo_id, TO_DATE(:fecha, \'YYYY-MM-DD\'), :tipo_tramite, :tipo_licencia, :nombre_completo, :genero)',
+      { id: id_registro, escuela_id: ubicacion_escuela_id_escuela, centro_id: ubicacion_centro_id_centro, municipio_id: municipio_id_municipio, departamento_id: municipio_departamento_id_departamento, correlativo_id: correlativo_id_correlativo, fecha, tipo_tramite, tipo_licencia, nombre_completo, genero },
       { autoCommit: true }
     );
-    res.status(201).json({ id: result.outBinds.id[0], ...req.body });
+    res.status(201).json({ id: id_registro, ubicacion_escuela_id_escuela, ubicacion_centro_id_centro, municipio_id_municipio, municipio_departamento_id_departamento, correlativo_id_correlativo, fecha, tipo_tramite, tipo_licencia, nombre_completo, genero });
   } catch (err) {
     res.status(500).json({ error: err.message });
   } finally {

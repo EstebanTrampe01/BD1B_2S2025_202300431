@@ -36,14 +36,14 @@ router.get('/:id', async (req, res) => {
 router.post('/', async (req, res) => {
   let connection;
   try {
-    const { pregunta_practico_id_pregunta_practico, examen_id_examen, nota } = req.body;
+    const { id_respuesta_practico, pregunta_practico_id_pregunta_practico, examen_id_examen, nota } = req.body;
     connection = await getConnection();
-    const result = await connection.execute(
-      'INSERT INTO P2_RESPUESTA_PRACTICO_USUARIO (ID_RESPUESTA_PRACTICO, PREGUNTA_PRACTICO_ID_PREGUNTA_PRACTICO, EXAMEN_ID_EXAMEN, NOTA) VALUES (P2_RESPUESTA_PRACTICO_SEQ.NEXTVAL, :pregunta_id, :examen_id, :nota) RETURNING ID_RESPUESTA_PRACTICO INTO :id',
-      { pregunta_id: pregunta_practico_id_pregunta_practico, examen_id: examen_id_examen, nota, id: { type: oracledb.NUMBER, dir: oracledb.BIND_OUT } },
+    await connection.execute(
+      'INSERT INTO P2_RESPUESTA_PRACTICO_USUARIO (ID_RESPUESTA_PRACTICO, PREGUNTA_PRACTICO_ID_PREGUNTA_PRACTICO, EXAMEN_ID_EXAMEN, NOTA) VALUES (:id, :pregunta_id, :examen_id, :nota)',
+      { id: id_respuesta_practico, pregunta_id: pregunta_practico_id_pregunta_practico, examen_id: examen_id_examen, nota },
       { autoCommit: true }
     );
-    res.status(201).json({ id: result.outBinds.id[0], pregunta_practico_id_pregunta_practico, examen_id_examen, nota });
+    res.status(201).json({ id: id_respuesta_practico, pregunta_practico_id_pregunta_practico, examen_id_examen, nota });
   } catch (err) {
     res.status(500).json({ error: err.message });
   } finally {

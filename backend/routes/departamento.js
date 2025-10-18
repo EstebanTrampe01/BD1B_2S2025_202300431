@@ -9,7 +9,13 @@ router.get('/', async (req, res) => {
   try {
     connection = await getConnection();
     const result = await connection.execute('SELECT * FROM P2_DEPARTAMENTO');
-    res.json(result.rows);
+    // Convertir el array de arrays a array de objetos JSON
+    const departamentos = result.rows.map(row => ({
+      id_departamento: row[0],
+      nombre: row[1],
+      codigo: row[2]
+    }));
+    res.json(departamentos);
   } catch (err) {
     res.status(500).json({ error: err.message });
   } finally {
@@ -36,14 +42,14 @@ router.get('/:id', async (req, res) => {
 router.post('/', async (req, res) => {
   let connection;
   try {
-    const { nombre, codigo } = req.body;
+    const { id_departamento, nombre, codigo } = req.body;
     connection = await getConnection();
-    const result = await connection.execute(
-      'INSERT INTO P2_DEPARTAMENTO (ID_DEPARTAMENTO, NOMBRE, CODIGO) VALUES (P2_DEPARTAMENTO_SEQ.NEXTVAL, :nombre, :codigo) RETURNING ID_DEPARTAMENTO INTO :id',
-      { nombre, codigo, id: { type: oracledb.NUMBER, dir: oracledb.BIND_OUT } },
+    await connection.execute(
+      'INSERT INTO P2_DEPARTAMENTO (ID_DEPARTAMENTO, NOMBRE, CODIGO) VALUES (:id, :nombre, :codigo)',
+      { id: id_departamento, nombre, codigo },
       { autoCommit: true }
     );
-    res.status(201).json({ id: result.outBinds.id[0], nombre, codigo });
+    res.status(201).json({ id: id_departamento, nombre, codigo });
   } catch (err) {
     res.status(500).json({ error: err.message });
   } finally {

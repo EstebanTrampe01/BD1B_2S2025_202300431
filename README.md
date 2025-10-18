@@ -141,7 +141,56 @@ Cada endpoint soporta:
 - Las consultas SQL están optimizadas para el esquema relacional definido
 
 ### Capturas de Evidencia
-*(Incluir capturas de: Docker Compose funcionando, DBeaver conectado, Postman con respuestas exitosas)*
 
-### Colaborador
-Proyecto desarrollado por Esteban Trampe. Colaborador agregado: @parguet
+## Docker Compose
+
+![alt text](<Documentacion/image copy 16.png>)
+
+## API 
+
+![alt text](<Documentacion/image copy 17.png>)
+
+## BD_FASE2 Colleciton
+
+![alt text](<Documentacion/image copy 18.png>)
+
+![alt text](<Documentacion/image copy 19.png>)
+
+## Departamento
+
+# GET ALL
+![alt text](<Documentacion/image copy.png>)
+# GET ID
+![alt text](<Documentacion/image copy 2.png>)
+# POST
+![alt text](<Documentacion/image copy 3.png>)
+# PULL
+![alt text](<Documentacion/image copy 4.png>)
+# DELETE
+![alt text](<Documentacion/image copy 5.png>)
+
+## Municipio
+
+# GET ALL
+![alt text](<Documentacion/image copy 7.png>)
+# GET ID
+![alt text](<Documentacion/image copy 8.png>)
+# POST
+![alt text](<Documentacion/image copy 6.png>)
+# PULL
+![alt text](<Documentacion/image copy 9.png>)
+# DELETE
+![alt text](<Documentacion/image copy 10.png>)
+
+## Centro
+
+# GET ALL
+![alt text](<Documentacion/image copy 12.png>)
+# GET ID
+![alt text](<Documentacion/image copy 13.png>)
+# POST
+![alt text](<Documentacion/image copy 11.png>)
+# PULL
+![alt text](<Documentacion/image copy 14.png>)
+# DELETE
+![alt text](<Documentacion/image copy 15.png>)

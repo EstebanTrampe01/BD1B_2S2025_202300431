@@ -36,14 +36,14 @@ router.get('/:id', async (req, res) => {
 router.post('/', async (req, res) => {
   let connection;
   try {
-    const { nombre, municipio_id_municipio } = req.body;
+    const { id_centro, nombre, municipio_id_municipio } = req.body;
     connection = await getConnection();
-    const result = await connection.execute(
-      'INSERT INTO P2_CENTRO (ID_CENTRO, NOMBRE, MUNICIPIO_ID_MUNICIPIO) VALUES (P2_CENTRO_SEQ.NEXTVAL, :nombre, :municipio_id) RETURNING ID_CENTRO INTO :id',
-      { nombre, municipio_id: municipio_id_municipio, id: { type: oracledb.NUMBER, dir: oracledb.BIND_OUT } },
+    await connection.execute(
+      'INSERT INTO P2_CENTRO (ID_CENTRO, NOMBRE, MUNICIPIO_ID_MUNICIPIO) VALUES (:id, :nombre, :municipio_id)',
+      { id: id_centro, nombre, municipio_id: municipio_id_municipio },
       { autoCommit: true }
     );
-    res.status(201).json({ id: result.outBinds.id[0], nombre, municipio_id_municipio });
+    res.status(201).json({ id: id_centro, nombre, municipio_id_municipio });
   } catch (err) {
     res.status(500).json({ error: err.message });
   } finally {
